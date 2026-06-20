@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { BRAND, WHY, PRODUCTS, BENEFITS, TESTIMONIALS, FAQS, INSTA_TILES } from "./data";
+import { BRAND, WHY, PRODUCTS, BENEFITS, TESTIMONIALS, FAQS, GALLERY_IMAGES } from "./data";
 
 /* ---------- small hooks ---------- */
 function useScrolled(threshold = 30) {
@@ -50,17 +50,13 @@ function Nav() {
       <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
         <div className="wrap nav-inner">
           <a href="#top" className="logo" onClick={close}>
-            <span className="logo-mark" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 13 q7 -9 14 0 q-7 9 -14 0Z" fill="#F8F3EA"/><circle cx="12" cy="13" r="3" fill="#5FBF4A"/></svg>
-            </span>
-            Mek<b>Bites</b>
+            <img src="/images/mekbites_logo.png" alt="MekBites" className="logo-img" />
           </a>
           <ul className="nav-links">
             {NAV_LINKS.map((l) => (
               <li key={l.href}><a href={l.href}>{l.label}</a></li>
             ))}
           </ul>
-          <a href="#contact" className="btn btn-primary nav-cta">Shop Now</a>
           <button className="nav-toggle" aria-label="Menu" aria-expanded={open} onClick={() => setOpen(!open)}>
             <span></span><span></span><span></span>
           </button>
@@ -70,7 +66,6 @@ function Nav() {
         {NAV_LINKS.map((l) => (
           <a key={l.href} href={l.href} onClick={close}>{l.label}</a>
         ))}
-        <a href="#contact" className="btn btn-primary" onClick={close}>Shop Now</a>
       </div>
     </>
   );
@@ -92,11 +87,10 @@ function Hero() {
             Premium Makhana crafted for taste, nutrition, and everyday snacking — guilt-free goodness the whole family will love.
           </p>
           <div className="hero-btns">
-            <a href="#products" className="btn btn-primary">Shop Now →</a>
             <a href="#contact" className="btn btn-ghost">Contact Us</a>
           </div>
           <div className="hero-stats">
-            <div className="st"><b>6</b><span>Bold Flavours</span></div>
+            <div className="st"><b>11</b><span>Bold Flavours</span></div>
             <div className="st"><b>0%</b><span>Deep Fried</span></div>
             <div className="st"><b>100%</b><span>Guilt-Free</span></div>
           </div>
@@ -104,9 +98,7 @@ function Hero() {
         <div className="hero-visual" aria-hidden="true">
           <div className="hero-jar">
             <span className="lid" />
-            <span className="nut-emoji">🥣</span>
-            <h3>MekBites</h3>
-            <p>Modern Day Snacking</p>
+            <img src="/images/mekbites_logo.png" alt="MekBites — Modern Day Snacking" className="hero-jar-logo" />
           </div>
           <div className="float-chip fc-1"><span className="ic" style={{ background: "rgba(95,191,74,.15)" }}>💪</span> High Protein</div>
           <div className="float-chip fc-2"><span className="ic" style={{ background: "rgba(255,90,54,.15)" }}>🔥</span> Roasted</div>
@@ -161,15 +153,15 @@ function Products({ onEnquire }) {
       <div className="wrap">
         <Reveal className="section-head">
           <span className="eyebrow">Our Products</span>
-          <h2 className="display">Six ways to crunch</h2>
-          <p>From pure raw fox nuts to bold roasted flavours — pick your craving.</p>
+          <h2 className="display">Eleven ways to crunch</h2>
+          <p>From tangy and tandoori to sweet and cheesy — pick your craving.</p>
         </Reveal>
         <div className="prod-grid">
           {PRODUCTS.map((p, i) => (
             <Reveal key={p.name} className="prod-card" style={{ transitionDelay: `${i * 50}ms` }}>
-              <div className="prod-top" style={{ background: p.grad }}>
+              <div className="prod-top">
                 <span className="prod-tag">{p.tag}</span>
-                <span className="emoji">{p.emoji}</span>
+                <img src={p.img} alt={p.name} className="prod-img" />
               </div>
               <div className="prod-body">
                 <h3>{p.name}</h3>
@@ -219,9 +211,7 @@ function About() {
     <section className="section about" id="about">
       <div className="wrap about-grid">
         <Reveal className="about-visual" aria-hidden="true">
-          <span className="ring a" />
-          <span className="ring b" />
-          <span className="big-nut">🥣</span>
+          <img src="/images/mekbites_aboutus.jpeg" alt="" className="about-img" />
         </Reveal>
         <Reveal className="about-text">
           <span className="eyebrow">About MekBites</span>
@@ -268,21 +258,14 @@ function Testimonials() {
   );
 }
 
-/* ---------- instagram ---------- */
-function Instagram() {
+/* ---------- gallery ---------- */
+function Gallery() {
   return (
-    <section className="section insta">
+    <section className="section gallery">
       <div className="wrap">
-        <Reveal className="insta-head">
-          <span className="eyebrow" style={{ justifyContent: "center" }}>On Instagram</span>
-          <h2 className="display">Follow the crunch</h2>
-          <a href={BRAND.instagramUrl} target="_blank" rel="noreferrer">@{BRAND.instagram}</a>
-        </Reveal>
-        <Reveal className="insta-grid">
-          {INSTA_TILES.map((t, i) => (
-            <a key={i} href={BRAND.instagramUrl} target="_blank" rel="noreferrer" className="insta-cell" style={{ background: t.bg }}>
-              {t.e}
-            </a>
+        <Reveal className="gallery-grid" as="div">
+          {GALLERY_IMAGES.map((src) => (
+            <img key={src} src={src} alt="" className="gallery-cell" loading="lazy" />
           ))}
         </Reveal>
       </div>
@@ -290,79 +273,71 @@ function Instagram() {
   );
 }
 
+/* ---------- contact icons ---------- */
+function PhoneIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2Z" />
+    </svg>
+  );
+}
+function MailIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm1 2.4V17h14V7.4l-6.4 4.6a1 1 0 0 1-1.2 0L5 7.4Zm1.2-.4 5.8 4.18L17.8 7H6.2Z" />
+    </svg>
+  );
+}
+function InstagramIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+function FacebookIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M14 9h2.5V6.2c-.46-.06-1.5-.2-2.6-.2-2.62 0-4.4 1.6-4.4 4.5V13H7v3h2.5v7h3v-7h2.4l.4-3h-2.8v-2.1c0-.87.27-1.9 1.5-1.9Z" />
+    </svg>
+  );
+}
+
 /* ---------- contact ---------- */
-function Contact({ prefill, clearPrefill }) {
-  const [form, setForm] = useState({ name: "", email: "", product: "", message: "" });
-  const [sent, setSent] = useState(false);
-
-  useEffect(() => {
-    if (prefill) {
-      setForm((f) => ({ ...f, product: prefill, message: `Hi MekBites, I'd love to know more about ${prefill}.` }));
-      setSent(false);
-    }
-  }, [prefill]);
-
-  const update = (k) => (e) => setForm({ ...form, [k]: e.target.value });
-  const submit = () => {
-    if (!form.name || !form.email) return;
-    setSent(true);
-    if (clearPrefill) clearPrefill();
-  };
-
+function Contact() {
   const waText = encodeURIComponent("Hi MekBites! I'd like to enquire about your makhana snacks.");
 
   return (
     <section className="section contact" id="contact">
-      <div className="wrap contact-grid">
+      <div className="wrap">
         <Reveal className="contact-info">
-          <span className="eyebrow">Get in Touch</span>
+          <span className="eyebrow" style={{ justifyContent: "center" }}>Get in Touch</span>
           <h2 className="display">Let's talk snacks</h2>
           <p>Questions, bulk orders or just want to say hi? We'd love to hear from you.</p>
           <div className="contact-rows">
             <a className="c-row" href={`tel:${BRAND.phoneRaw}`}>
-              <span className="ic" style={{ background: "var(--orange)" }}>📞</span>
-              <div><span>Call us</span><b>{BRAND.phone}</b></div>
+              <span className="ic" style={{ background: "var(--orange)" }}><PhoneIcon /></span>
+              <div><span>Call us:</span><b>{BRAND.phone}</b></div>
             </a>
             <a className="c-row" href={`mailto:${BRAND.email}`}>
-              <span className="ic" style={{ background: "var(--teal)" }}>✉️</span>
-              <div><span>Email</span><b>{BRAND.email}</b></div>
+              <span className="ic" style={{ background: "var(--teal)" }}><MailIcon /></span>
+              <div><span>Email:</span><b>{BRAND.email}</b></div>
             </a>
             <a className="c-row" href={BRAND.instagramUrl} target="_blank" rel="noreferrer">
-              <span className="ic" style={{ background: "var(--green)" }}>📸</span>
-              <div><span>Instagram</span><b>@{BRAND.instagram}</b></div>
+              <span className="ic" style={{ background: "var(--green)" }}><InstagramIcon /></span>
+              <div><span>Instagram:</span><b>@{BRAND.instagram}</b></div>
+            </a>
+            <a className="c-row" href={BRAND.facebookUrl} target="_blank" rel="noreferrer">
+              <span className="ic" style={{ background: "#1877F2" }}><FacebookIcon /></span>
+              <div><span>Facebook:</span><b>MekBites</b></div>
             </a>
           </div>
           <div className="c-actions">
             <a className="btn btn-teal" href={`https://wa.me/${BRAND.phoneRaw}?text=${waText}`} target="_blank" rel="noreferrer">💬 WhatsApp</a>
             <a className="btn btn-ghost" href={`tel:${BRAND.phoneRaw}`}>📞 Call Now</a>
           </div>
-        </Reveal>
-
-        <Reveal className="contact-form">
-          <h3>Product Enquiry</h3>
-          <p>Drop your details and we'll get back within 24 hours.</p>
-          {sent && <div className="form-success">✓ Thanks! Your enquiry is in. We'll reach out soon.</div>}
-          <div className="field">
-            <label htmlFor="cf-name">Your name</label>
-            <input id="cf-name" type="text" placeholder="Your full name" value={form.name} onChange={update("name")} />
-          </div>
-          <div className="field">
-            <label htmlFor="cf-email">Email</label>
-            <input id="cf-email" type="email" placeholder="you@example.com" value={form.email} onChange={update("email")} />
-          </div>
-          <div className="field">
-            <label htmlFor="cf-product">Interested in</label>
-            <select id="cf-product" value={form.product} onChange={update("product")}>
-              <option value="">Select a product…</option>
-              {PRODUCTS.map((p) => <option key={p.name} value={p.name}>{p.name}</option>)}
-              <option value="Bulk / Wholesale">Bulk / Wholesale</option>
-            </select>
-          </div>
-          <div className="field">
-            <label htmlFor="cf-msg">Message</label>
-            <textarea id="cf-msg" placeholder="Tell us what you're looking for…" value={form.message} onChange={update("message")} />
-          </div>
-          <button className="btn btn-primary" style={{ width: "100%" }} onClick={submit}>Send Enquiry</button>
         </Reveal>
       </div>
     </section>
@@ -484,9 +459,7 @@ function WhatsAppFloat() {
 
 /* ---------- app ---------- */
 export default function App() {
-  const [prefill, setPrefill] = useState("");
-  const handleEnquire = (name) => {
-    setPrefill(name);
+  const handleEnquire = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
   return (
@@ -499,8 +472,8 @@ export default function App() {
       <Benefits />
       <About />
       <Testimonials />
-      <Instagram />
-      <Contact prefill={prefill} clearPrefill={() => setPrefill("")} />
+      <Gallery />
+      <Contact />
       <Faq />
       <Newsletter />
       <Footer />

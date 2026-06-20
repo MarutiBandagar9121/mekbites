@@ -8,6 +8,7 @@ export const BRAND = {
   email: "heymekbites@gmail.com",
   instagram: "mekbites",
   instagramUrl: "https://instagram.com/mekbites",
+  facebookUrl: "https://www.facebook.com/share/193G7KmFQc/",
 };
 
 export const WHY = [
@@ -20,12 +21,17 @@ export const WHY = [
 ];
 
 export const PRODUCTS = [
-  { name: "Raw Makhana", emoji: "🤍", tag: "Classic", size: "125g", grad: "linear-gradient(150deg,#F8F3EA,#efe6d4)", desc: "Premium, ungraded fox nuts in their purest form. Roast them your way or enjoy as-is." },
-  { name: "Tandoori Makhana", emoji: "🌶️", tag: "Bestseller", size: "70g jar", grad: "linear-gradient(150deg,#FF7A4D,#E5431F)", desc: "Smoky, spiced and bold — that authentic tandoor warmth in every crunch." },
-  { name: "Tangy Tomato", emoji: "🍅", tag: "Fan Favourite", size: "70g jar", grad: "linear-gradient(150deg,#FF6B52,#d63a1e)", desc: "Sweet, sharp and zingy. A tomato kick that keeps your hand reaching back." },
-  { name: "Peri Peri Makhana", emoji: "🔴", tag: "Spicy", size: "70g jar", grad: "linear-gradient(150deg,#E5431F,#9e2a12)", desc: "Fiery African peri peri heat balanced with a citrusy edge. For the brave." },
-  { name: "Mint Makhana", emoji: "🌿", tag: "Refreshing", size: "70g jar", grad: "linear-gradient(150deg,#5FBF4A,#3c8a2c)", desc: "Cool, herby and crisp. A refreshing twist that feels light and clean." },
-  { name: "Cream & Onion", emoji: "🧅", tag: "Creamy", size: "70g jar", grad: "linear-gradient(150deg,#007B7F,#045d60)", desc: "Rich, savoury and moreish. Creamy onion goodness with a satisfying crunch." },
+  { name: "Tandoori Makhana", img: "/images/flavours/makhana_tandoori.jpeg", tag: "Bestseller", size: "100g", desc: "Smoky, spiced and bold — that authentic tandoor warmth in every crunch." },
+  { name: "Peri Peri Makhana", img: "/images/flavours/makhana_periperi.jpeg", tag: "Spicy", size: "100g", desc: "Fiery peri peri heat balanced with a citrusy edge. For the brave." },
+  { name: "Tangy Tomato Makhana", img: "/images/flavours/makhana_tangytomato.jpeg", tag: "Fan Favourite", size: "100g", desc: "Sweet, sharp and zingy. A tomato kick that keeps your hand reaching back." },
+  { name: "Achaari Makhana", img: "/images/flavours/makhana_achaari.jpeg", tag: "Traditional", size: "100g", desc: "Classic Indian pickle masala — tangy, spiced and full of desi flavour." },
+  { name: "Pudina Makhana", img: "/images/flavours/makhana_pudina.jpeg", tag: "Refreshing", size: "100g", desc: "Cool, herby and crisp. A refreshing mint twist that feels light and clean." },
+  { name: "Cream & Onion Makhana", img: "/images/flavours/makhana_creamandonion.jpeg", tag: "Creamy", size: "100g", desc: "Rich, savoury and moreish. Creamy onion goodness with a satisfying crunch." },
+  { name: "Cheese & Black Pepper Makhana", img: "/images/flavours/makhana_cheeseandblackpepeer.jpeg", tag: "Cheesy", size: "100g", desc: "Sharp cheddar notes with a peppery bite — a bold, savoury favourite." },
+  { name: "Cheese & Masala Makhana", img: "/images/flavours/makhana_cheeseandmasala.jpeg", tag: "Cheesy", size: "100g", desc: "Creamy cheese meets classic Indian masala spice for a desi-fusion crunch." },
+  { name: "Chat Masala Makhana", img: "/images/flavours/makhana_chatmasla.jpeg", tag: "Tangy", size: "100g", desc: "Zesty street-food chaat spice — tangy, tart and irresistibly moreish." },
+  { name: "Caramel & Crunch Makhana", img: "/images/flavours/makhana_caramelandcrunch.jpeg", tag: "Sweet", size: "100g", desc: "Buttery caramel sweetness wrapped around every crunchy bite." },
+  { name: "Himalayan Pink Salt & Pepper Makhana", img: "/images/flavours/makhana_himalayanpinksaltandpepper.jpeg", tag: "Classic", size: "100g", desc: "Pure, mineral-rich Himalayan pink salt with a hint of cracked pepper." },
 ];
 
 export const BENEFITS = [
@@ -46,22 +52,20 @@ export const TESTIMONIALS = [
 export const FAQS = [
   { q: "What is Makhana?", a: "Makhana, also called fox nuts or lotus seeds, are seeds harvested from the lotus flower. They're roasted into a light, crunchy snack that's naturally high in protein and fibre and low in calories — a staple of traditional Indian wellness." },
   { q: "Is MekBites roasted or fried?", a: "Every MekBites product is roasted, never fried. That means all the crunch and flavour you love, with far less oil and fewer calories — guilt-free snacking, done right." },
-  { q: "What flavors are available?", a: "We offer Raw Makhana in 125g packets, plus five flavoured varieties in 70g jars: Tandoori, Tangy Tomato, Peri Peri, Mint, and Cream & Onion." },
+  { q: "What flavors are available?", a: "We offer 11 bold flavours in 100g packs: Tandoori, Peri Peri, Tangy Tomato, Achaari, Pudina, Cream & Onion, Cheese & Black Pepper, Cheese & Masala, Chat Masala, Caramel & Crunch, and Himalayan Pink Salt & Pepper." },
   { q: "Is it suitable for daily snacking?", a: "Absolutely. MekBites is low in calories, rich in fibre and protein, and naturally gluten-free — making it a smart everyday snack for all age groups, any time of day." },
   { q: "How should it be stored?", a: "Keep the pack sealed in a cool, dry place away from direct sunlight. Once opened, reseal the jar tightly to lock in maximum crunch and freshness." },
 ];
 
-export const INSTA_TILES = [
-  { e: "🥣", bg: "linear-gradient(135deg,#FF5A36,#E5431F)" },
-  { e: "🌶️", bg: "linear-gradient(135deg,#007B7F,#045d60)" },
-  { e: "🍅", bg: "linear-gradient(135deg,#5FBF4A,#3c8a2c)" },
-  { e: "🤍", bg: "linear-gradient(135deg,#efe6d4,#d8c9aa)" },
-  { e: "🔴", bg: "linear-gradient(135deg,#E5431F,#9e2a12)" },
-  { e: "🌿", bg: "linear-gradient(135deg,#5FBF4A,#007B7F)" },
-  { e: "🧅", bg: "linear-gradient(135deg,#007B7F,#045d60)" },
-  { e: "🔥", bg: "linear-gradient(135deg,#FF7A4D,#E5431F)" },
-  { e: "💪", bg: "linear-gradient(135deg,#5FBF4A,#3c8a2c)" },
-  { e: "⭐", bg: "linear-gradient(135deg,#FF5A36,#d63a1e)" },
-  { e: "🍃", bg: "linear-gradient(135deg,#007B7F,#0a9a9f)" },
-  { e: "🥗", bg: "linear-gradient(135deg,#5FBF4A,#2f7a22)" },
+export const GALLERY_IMAGES = [
+  "/images/product_images/tandoori_makhana.jpeg",
+  "/images/product_images/tangy_tomato_makhana.jpeg",
+  "/images/product_images/aachari_masti_makhana.jpeg",
+  "/images/product_images/pudina_makhana.jpeg",
+  "/images/product_images/mint_makhana.jpeg",
+  "/images/product_images/cream_and_onion_makhana.jpeg",
+  "/images/product_images/cream_crunch_makhan.jpeg",
+  "/images/product_images/chat_masala_makhana.jpeg",
+  "/images/product_images/himalayan_pink_sal_and_pepper_makhana.jpeg",
+  "/images/product_images/plain_makhana.jpeg",
 ];

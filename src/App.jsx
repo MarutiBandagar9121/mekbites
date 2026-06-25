@@ -468,14 +468,13 @@ export default function App() {
       <Hero />
       <Marquee />
       <Why />
-      <Products onEnquire={handleEnquire} />
+      <Gallery />
       <Benefits />
       <About />
       <Testimonials />
-      <Gallery />
+      <Products onEnquire={handleEnquire} />
       <Contact />
       <Faq />
-      <Newsletter />
       <Footer />
       <WhatsAppFloat />
     </>

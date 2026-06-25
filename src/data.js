@@ -21,17 +21,18 @@ export const WHY = [
 ];
 
 export const PRODUCTS = [
-  { name: "Tandoori Makhana", img: "/images/flavours/makhana_tandoori.jpeg", tag: "Bestseller", size: "100g", desc: "Smoky, spiced and bold — that authentic tandoor warmth in every crunch." },
-  { name: "Peri Peri Makhana", img: "/images/flavours/makhana_periperi.jpeg", tag: "Spicy", size: "100g", desc: "Fiery peri peri heat balanced with a citrusy edge. For the brave." },
-  { name: "Tangy Tomato Makhana", img: "/images/flavours/makhana_tangytomato.jpeg", tag: "Fan Favourite", size: "100g", desc: "Sweet, sharp and zingy. A tomato kick that keeps your hand reaching back." },
-  { name: "Achaari Makhana", img: "/images/flavours/makhana_achaari.jpeg", tag: "Traditional", size: "100g", desc: "Classic Indian pickle masala — tangy, spiced and full of desi flavour." },
-  { name: "Pudina Makhana", img: "/images/flavours/makhana_pudina.jpeg", tag: "Refreshing", size: "100g", desc: "Cool, herby and crisp. A refreshing mint twist that feels light and clean." },
-  { name: "Cream & Onion Makhana", img: "/images/flavours/makhana_creamandonion.jpeg", tag: "Creamy", size: "100g", desc: "Rich, savoury and moreish. Creamy onion goodness with a satisfying crunch." },
-  { name: "Cheese & Black Pepper Makhana", img: "/images/flavours/makhana_cheeseandblackpepeer.jpeg", tag: "Cheesy", size: "100g", desc: "Sharp cheddar notes with a peppery bite — a bold, savoury favourite." },
-  { name: "Cheese & Masala Makhana", img: "/images/flavours/makhana_cheeseandmasala.jpeg", tag: "Cheesy", size: "100g", desc: "Creamy cheese meets classic Indian masala spice for a desi-fusion crunch." },
-  { name: "Chat Masala Makhana", img: "/images/flavours/makhana_chatmasla.jpeg", tag: "Tangy", size: "100g", desc: "Zesty street-food chaat spice — tangy, tart and irresistibly moreish." },
-  { name: "Caramel & Crunch Makhana", img: "/images/flavours/makhana_caramelandcrunch.jpeg", tag: "Sweet", size: "100g", desc: "Buttery caramel sweetness wrapped around every crunchy bite." },
-  { name: "Himalayan Pink Salt & Pepper Makhana", img: "/images/flavours/makhana_himalayanpinksaltandpepper.jpeg", tag: "Classic", size: "100g", desc: "Pure, mineral-rich Himalayan pink salt with a hint of cracked pepper." },
+  { name: "Plain Makhana", img: "/images/flavour_img/plain_makhana.jpeg", tag: "Classic", size: "100g", desc: "Pure, Simple & just Great!" },
+  { name: "Tandoori Makhana", img: "/images/flavour_img/tandoori_makhana.png", tag: "Bestseller", size: "100g", desc: "Smoky, spiced and bold — that authentic tandoor warmth in every crunch." },
+  { name: "Peri Peri Makhana", img: "/images/flavour_img/peri_peri_makhana.png", tag: "Spicy", size: "100g", desc: "Fiery peri peri heat balanced with a citrusy edge. For the brave." },
+  { name: "Tangy Tomato Makhana", img: "/images/flavour_img/tangy_tomato_makhana.png", tag: "Fan Favourite", size: "100g", desc: "Sweet, sharp and zingy. A tomato kick that keeps your hand reaching back." },
+  { name: "Achaari Makhana", img: "/images/flavour_img/aachari_masti_makhana.png", tag: "Traditional", size: "100g", desc: "Classic Indian pickle masala — tangy, spiced and full of desi flavour." },
+  { name: "Pudina Makhana", img: "/images/flavour_img/pudina_makhana.png", tag: "Refreshing", size: "100g", desc: "Cool, herby and crisp. A refreshing mint twist that feels light and clean." },
+  { name: "Cream & Onion Makhana", img: "/images/flavour_img/cream_and_onion_makhana.png", tag: "Creamy", size: "100g", desc: "Rich, savoury and moreish. Creamy onion goodness with a satisfying crunch." },
+  { name: "Cheese & Black Pepper Makhana", img: "/images/flavour_img/cheese_black_pepper_makhana.png", tag: "Cheesy", size: "100g", desc: "Sharp cheddar notes with a peppery bite — a bold, savoury favourite." },
+  { name: "Cheese & Masala Makhana", img: "/images/flavour_img/cheese_masala_makhana.png", tag: "Cheesy", size: "100g", desc: "Creamy cheese meets classic Indian masala spice for a desi-fusion crunch." },
+  { name: "Chat Masala Makhana", img: "/images/flavour_img/chat_masala_makhana.jpeg", tag: "Tangy", size: "100g", desc: "Zesty street-food chaat spice — tangy, tart and irresistibly moreish." },
+  { name: "Caramel & Crunch Makhana", img: "/images/flavour_img/caramel_crunch _makhana.png", tag: "Sweet", size: "100g", desc: "Buttery caramel sweetness wrapped around every crunchy bite." },
+  { name: "Himalayan Pink Salt & Pepper Makhana", img: "/images/flavour_img/himalayan_pink_salt_makhana.png", tag: "Classic", size: "100g", desc: "Pure, mineral-rich Himalayan pink salt with a hint of cracked pepper." },
 ];
 
 export const BENEFITS = [
@@ -58,14 +59,14 @@ export const FAQS = [
 ];
 
 export const GALLERY_IMAGES = [
-  "/images/product_images/tandoori_makhana.jpeg",
-  "/images/product_images/tangy_tomato_makhana.jpeg",
-  "/images/product_images/aachari_masti_makhana.jpeg",
-  "/images/product_images/pudina_makhana.jpeg",
-  "/images/product_images/mint_makhana.jpeg",
-  "/images/product_images/cream_and_onion_makhana.jpeg",
-  "/images/product_images/cream_crunch_makhan.jpeg",
-  "/images/product_images/chat_masala_makhana.jpeg",
-  "/images/product_images/himalayan_pink_sal_and_pepper_makhana.jpeg",
-  "/images/product_images/plain_makhana.jpeg",
+  "/images/product_img/tandoori_makhana.png",
+  "/images/product_img/tomato_makhana.png",
+  "images/product_img/aachari_masti.png",
+  "/images/product_img/pudina_makhana.png",
+  "/images/product_img/mint_makhana.png",
+  "/images/product_img/cream_and_onion_makhana.jpeg",
+  "/images/product_img/caramel_makhana.png",
+  "/images/product_img/chat_masala_makhana.png",
+  "/images/product_img/himalya_pink_salt_pepper.png",
+  "/images/product_img/plain_makhana.png",
 ];
